@@ -1,3 +1,33 @@
+
+
+<?php
+    $result = null;
+    $error  = null;
+
+    if (isset($_POST['operation'])) {
+
+    $num1      = $_POST['num1'];
+    $num2      = $_POST['num2'];
+    $operation = $_POST['operation'];
+
+    if ($operation == 'add') {
+        $result = $num1 + $num2;
+    } elseif ($operation == 'subtract') {
+        $result = $num1 - $num2;
+    } elseif ($operation == 'multiply') {
+        $result = $num1 * $num2;
+    } elseif ($operation == 'divide') {
+        if ($num2 == 0) {
+            $error = "Cannot divide by zero";
+        } else {
+            $result = $num1 / $num2;
+        }
+    }
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,31 +67,12 @@
         </div>
     </form>
 
+ <?php if ($result !== null): ?>
+ <p><strong>Result:</strong> <?php echo $result ?></p>
+    <?php endif; ?>
+
+ <?php if ($error): ?>
+     <p style="color:red;"> <?php echo $error ?></p>
+    <?php endif; ?>
 </body>
 </html>
-
-<?php
-
-    if (isset($_POST['operation'])) {
-    $num1      = $_POST['num1'];
-    $num2      = $_POST['num2'];
-    $operation = $_POST['operation'];
-    $result    = 0;
-    if ($operation == 'add') {
-        $result = $num1 + $num2;
-    } else if ($operation == 'subtract') {
-        $result = $num1 - $num2;
-    } else if ($operation == 'multiply') {
-        $result = $num1 * $num2;
-    } else if ($operation == 'divide') {
-
-        if ($num2 == 0) {
-            echo " <h3> Connot divide by zero</h3>";
-            return;
-        }
-        $result = $num1 / $num2;
-
-    }
-    echo "<h3>Result: $result</h3>";
-    }
-?>
