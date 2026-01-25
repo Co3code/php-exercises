@@ -46,6 +46,7 @@
         padding: 8px 16px;
         cursor: pointer;
     }
+    
 </style>
 <body>
     <h2> PHP Exercise 2.2</h2>
