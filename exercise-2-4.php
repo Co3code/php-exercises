@@ -1,3 +1,9 @@
+<?php
+    if (isset($_POST['fahrenheit'])) {
+    $fahrenheit = $_POST['fahrenheit'];
+    $celsius    = ($fahrenheit - 32) * 5 / 9;
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +18,7 @@
     <input type="number" name="fahrenheit" step="any" required>
 
     =
-    
+
     Celsius:
     <input type="text" value="<?php echo isset($celsius) ? $celsius : ''; ?>" readonly>
 
@@ -21,12 +27,6 @@
     <button type="submit">Convert</button>
 </form>
 
-<?php
-if (isset($_POST['fahrenheit'])) {
-    $fahrenheit = $_POST['fahrenheit'];
-    $celsius = ($fahrenheit - 32) * 5 / 9;
-}
-?>
 
 </body>
 </html>
