@@ -7,10 +7,6 @@
     $deduction  = $grossSalry * 0.10;
     $netSalary  = $grossSalry - $deduction;
 
-    echo "<h3>Result</h3>";
-    echo "Gross Salary:" . $grossSalry . "<br>";
-    echo "Deduction:" . $deduction . "<br>";
-    echo "Net Salary:" . $netSalary . "<br>";
     }
 ?>
 
@@ -32,6 +28,15 @@
      <input type="text" name="rate"><br><br>
      <button type="submit" name="calculate">calculate salary</button>
     </form>
+
+    <strong> GrossSalry</strong>
+    <?php echo isset($grossSalry) ? $grossSalry : ''; ?> <br>
+
+    <strong>Dediction</strong>
+    <?php echo isset($deduction) ? $deduction : ''; ?><br>
+
+    <strong>Net Salary</strong>
+    <?php echo isset($netSalary) ? $netSalary : ''; ?><br>
 
 
 </body>
