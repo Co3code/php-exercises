@@ -25,26 +25,27 @@
     </form>
     <br>
     <?php
-        if (isset($_POST['compute'])) {
-            $amount  =(float) $_POST['amount'];
-            $interest = (float)$_POST['interest'];
-            $months  = (int)$_POST['months'];
 
-            if ($amount > 0 && $interest >= 0 && $months > 0) {
-                $totalInterest = $amount * ($interest / 100) * ($months / 12);
-                $totalPayable  = $amount + $totalInterest;
-                $monthlyPay    = $totalPayable / $months;
+if (isset($_POST['compute'])) {
+    $amount   = (float) $_POST['amount'];
+    $interest = (float) $_POST['interest'];
+    $months   = (int) $_POST['months'];
 
-                echo " <h3>Result</h3>";
-                echo "Loan Amount:" . number_format($amount, 2) . "<br>";
-                echo "Total Interest:" . number_format($totalInterest, 2) . "<br>";
-                echo "Total Payable:" . number_format($totalPayable, 2) . "<br>";
-                echo "Monthly Payable:" . number_format($monthlyPay, 2) . "<br>";
-            } else {
-                echo " Please enter valid values ";
-            }
+    if ($amount > 0 && $interest >= 0 && $months > 0) {
+        $totalInterest = $amount * ($interest / 100) * ($months / 12);
+        $totalPayable  = $amount + $totalInterest;
+        $monthlyPay    = $totalPayable / $months;
 
-        }
+        echo "<h3>Result</h3>";
+        echo "Loan Amount: " . number_format($amount, 2) . "<br>";
+        echo "Total Interest: " . number_format($totalInterest, 2) . "<br>";
+        echo "Total Payable: " . number_format($totalPayable, 2) . "<br>";
+        echo "Monthly Payable: " . number_format($monthlyPay, 2) . "<br>";
+    } else {
+        echo "Please enter valid values";
+    }
+}
+
 
     ?>
 </body>
