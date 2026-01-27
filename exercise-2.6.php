@@ -1,17 +1,17 @@
 <?php
-if (isset($_POST['calculate'])){
+    if (isset($_POST['calculate'])) {
     $days = $_POST['Days'];
     $rate = $_POST['rate'];
-    
-    $grossSalry  = $days * $rate;
-    $deduction = $grossSalry * 0.10;
-    $netSalary = $grossSalry - $deduction;
+
+    $grossSalry = $days * $rate;
+    $deduction  = $grossSalry * 0.10;
+    $netSalary  = $grossSalry - $deduction;
 
     echo "<h3>Result</h3>";
     echo "Gross Salary:" . $grossSalry . "<br>";
     echo "Deduction:" . $deduction . "<br>";
     echo "Net Salary:" . $netSalary . "<br>";
-}
+    }
 ?>
 
 <!DOCTYPE html>
@@ -28,11 +28,11 @@ if (isset($_POST['calculate'])){
      <label for="">Number of Days Salary:</label><br>
      <input type="text" name="Days"><br><br>
 
-     <input type="text" name="rate"><br>
-     <label for="">Rate Per Day:</label><br><br>
+     <label for="">Rate Per Day:</label><br>
+     <input type="text" name="rate"><br><br>
      <button type="submit" name="calculate">calculate salary</button>
     </form>
-    
-    
+
+
 </body>
 </html
