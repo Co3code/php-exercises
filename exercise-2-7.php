@@ -32,25 +32,26 @@
         height: 100vh;
         font-family: Arial;
     }
-    form{
-
-        display: flex;
-        gap: 10px;
-    }
- 
+   .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .tittle{
+    margin-bottom: 15px;
+    text-align: center;
+   }
 
 
 </style>
 <body>
+    <div class="container">
     <h2 class="tittle">Exercise 2-7</h2>
-
-    <form action="" method="post">
-        <button type="submit" name="decrament">--</button>
-        <input type="text" name="value" value="<?php echo $value; ?>" readonly>
-        <button type="submit" name="incrament">++</button>
-
-
-    </form>
-
+      <form action="" method="post">
+            <button type="submit" name="decrament">--</button>
+            <input type="text" name="value" value="<?php echo $value; ?>" readonly>
+            <button type="submit" name="incrament">++</button>
+        </form>
+    </div>
 </body>
 </html>
