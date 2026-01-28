@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h2>Exercise</h2>
+<h2>Exercise 2-4</h2>
 
 <form method="post">
     Fahrenheit:
