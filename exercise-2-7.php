@@ -23,12 +23,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Increment / Decrement Counter</title>
 </head>
+<style>
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial;
+    }
+    form{
+
+        display: flex;
+        gap: 10px;
+    }
+ 
+
+
+</style>
 <body>
-    <h2>Exercise 2-7</h2>
+    <h2 class="tittle">Exercise 2-7</h2>
 
     <form action="" method="post">
         <button type="submit" name="decrament">--</button>
-        <input type="number" name="value" value="<?php echo $value; ?>" readonly>
+        <input type="text" name="value" value="<?php echo $value; ?>" readonly>
         <button type="submit" name="incrament">++</button>
 
 
