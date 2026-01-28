@@ -49,7 +49,7 @@
     
 </style>
 <body>
-    <h2> PHP Exercise 2.2</h2>
+    <h2> PHP Exercise 2-2</h2>
 
     <form action="" method="post">
         <label>Num 1:</label>
