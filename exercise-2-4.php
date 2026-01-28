@@ -16,9 +16,7 @@
 <form method="post">
     Fahrenheit:
     <input type="number" name="fahrenheit" step="any" required>
-
     =
-
     Celsius:
     <input type="text" value="<?php echo isset($celsius) ? $celsius : ''; ?>" readonly>
 
