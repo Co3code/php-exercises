@@ -35,7 +35,7 @@
         <option value="Japanese">Japanese</option>
     </select>
 
-    <button type="submit" name="submit" class="btn-green">
+    <button type="submit" name="submit" >
         Greet
     </button>
 </form>
