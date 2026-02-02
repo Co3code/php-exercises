@@ -58,7 +58,7 @@
     <?php echo isset($finalGrade) ? number_format($finalGrade, 2) : ''; ?> <br>
     
     <strong>Numerical Equivalent</strong>
-    <?php  echo isset($equivalent) ? $equivalent : "";?>
+    <?php  echo isset($equivalent) ? $equivalent : "";?> <br>
   
     <strong>Remark:</strong>
     <?php echo isset($remark) ? $remark : ""; ?> <br>
