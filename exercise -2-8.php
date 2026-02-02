@@ -29,6 +29,7 @@
          $equivalent = "3.00";
         $remark = "Passed";
     } else{
+        $equivalent = "5.00";
         $remark = "failed";
     }
 
