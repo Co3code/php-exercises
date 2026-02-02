@@ -8,14 +8,27 @@
 
     $finalGrade = ($prelim * 0.20) + ($midterm * 0.30) + ($endterm * 0.50);
 
-    if ($finalGrade >= 90) {
+    if ($finalGrade >= 97) {
+        $equivalent = "1.00";   
         $remark = "Excellent ";
-    } elseif ($finalGrade >= 80) {
-        $remark = "Good";
+    } elseif ($finalGrade >= 94) {
+        $equivalent = "1.25";
+        $remark = "Superior";
 
-    } elseif ($finalGrade >= 75) {
+    } elseif ($finalGrade >= 91) {
+         $equivalent = "1.50";
+        $remark = "Very Good";
+    } elseif ($finalGrade >= 88) {
+         $equivalent = "1.75";
+        $remark = "Good";
+    } elseif ($finalGrade >= 85) {
+         $equivalent = "2.00";
+        $remark = "Satisfactory";
+    } 
+    elseif ($finalGrade >= 75) {
+         $equivalent = "3.00";
         $remark = "Passed";
-    } else {
+    } else{
         $remark = "failed";
     }
 
