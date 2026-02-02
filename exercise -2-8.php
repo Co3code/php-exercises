@@ -42,9 +42,13 @@
 
         <strong> Average Grade:</strong>
     <?php echo isset($finalGrade) ? number_format($finalGrade, 2) : ''; ?> <br>
-
+    
+    <strong>Numerical Equivalent</strong>
+    <?php  echo isset($equivalent) ? $equivalent : "";?>
+  
     <strong>Remark:</strong>
     <?php echo isset($remark) ? $remark : ""; ?> <br>
+
 
 </body>
 </html>
