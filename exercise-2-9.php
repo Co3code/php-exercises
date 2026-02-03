@@ -44,10 +44,10 @@
 
      Select Math Operation <br>
 
-     <input type="radio" name="operation" value="add" required>Addition <br>
-     <input type="radio" name="operation" value="sub" required>Subtraction <br>
-     <input type="radio" name="operation" value="mul" required>Multiplication<br>
-     <input type="radio" name="operation" value="div" required>Division <br>
+     <input type="radio" name="operation" value="Addition" required>Addition <br>
+     <input type="radio" name="operation" value="Subtraction" required>Subtraction <br>
+     <input type="radio" name="operation" value="Multiplication" required>Multiplication<br>
+     <input type="radio" name="operation" value="Division" required>Division <br>
 
      <input type="submit" name="calculate" value="Calulate">
 
