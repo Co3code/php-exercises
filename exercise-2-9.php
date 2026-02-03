@@ -14,6 +14,13 @@
         case 'sub':
             $result = $num1 - $num2;
             break;
+
+        case 'mul':
+            $result = $num1 * $num2;
+            break;
+        case 'div':
+            $result = ($num2 != 0) ? $num1 / $num2 : "connot divide it by zero";
+            break;
     }
     }
 
