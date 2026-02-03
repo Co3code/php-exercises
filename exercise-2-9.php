@@ -1,7 +1,21 @@
 
 
-<?php 
-// to be continue
+<?php
+    if (isset($_POST['calculate'])) {
+    $num1      = $_POST['num1'];
+    $num2      = $_POST['num2'];
+    $operation = $_POST['operation'];
+
+    switch ($operation) {
+        case 'add':
+            $result = $num1 + $num2;
+            break;
+
+        case 'sub':
+            $result = $num1 - $num2;
+            break;
+    }
+    }
 
 ?>
 
@@ -34,8 +48,8 @@
   </form>
 
 
-  <strong>Selected operation:</strong><br>
-   <?php echo isset($operation) ? $operation : ""; ?>
+  <strong>Selected operation:</strong>
+   <?php echo isset($operation) ? $operation : ""; ?><br>
 
   <strong>Result:</strong>
   <?php echo isset($result) ? $result : ""; ?>
