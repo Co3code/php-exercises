@@ -8,10 +8,10 @@
     }
 
     // Add checked fruits
-    if (isset($_POST['add']) && isset($_POST['fruits'])) {
-    foreach ($_POST['fruits'] as $fruit) {
-        if (! in_array($fruit, $_SESSION['list'])) {
-            $_SESSION['list'][] = $fruit;
+    if (isset($_POST['add']) && isset($_POST['fruit'])) {
+    foreach ($_POST['fruit'] as $f) {
+        if (! in_array($f, $_SESSION['list'])) {
+            $_SESSION['list'][] = $f;
         }
     }
     }
@@ -39,7 +39,7 @@
 
     <div style="float: left; width: 10%;">
     <input type="checkbox" name="fruit[]" value="Apple">Apple <br>
-    <input type="checkbox" name="fruit[]" value="Orange">Orangeb <br>
+    <input type="checkbox" name="fruit[]" value="Orange">Orange <br>
     <input type="checkbox" name="fruit[]" value="Mango">Mango <br>
     <input type="checkbox" name="fruit[]" value="Strawberry">Strawberry <br>
     </div>
@@ -58,7 +58,7 @@
 </p>
 
 <p>
-    <textarea  rows="10" cols="50" style="resize: none;" readonly> <?php echo $list; ?></textarea>
+    <textarea rows="10" cols="50" style="resize: none;" readonly><?php echo $list; ?></textarea>
 </p>
     </form>
 
