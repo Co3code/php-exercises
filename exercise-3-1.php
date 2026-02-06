@@ -10,17 +10,22 @@
     <form method="post">
 
 <p><strong>Select fruit:</strong></p>
-<p>
-    <input type="checkbox" name="fruit[]" value="Apple">Apple
-    <input type="checkbox" name="fruit[]" value="Orange">Orange
-    <input type="checkbox" name="fruit[]" value="Mango">Mango
-    <input type="checkbox" name="fruit[]" value="Strawberry">Strawberry
-    <input type="checkbox" name="fruit[]" value="Guava">Guava
-    <input type="checkbox" name="fruit[]" value="Cherry">Cherry
-    <input type="checkbox" name="fruit[]" value="Grape">Grape
-    <input type="checkbox" name="fruit[]" value="Pineapple">Pineapple
-    <input type="checkbox" name="fruit[]" value="Water Melon">Water Melon
-</p>
+
+    <div style="float: left; width: 10%;">
+    <input type="checkbox" name="fruit[]" value="Apple">Apple <br>
+    <input type="checkbox" name="fruit[]" value="Orange">Orangeb <br>
+    <input type="checkbox" name="fruit[]" value="Mango">Mango <br>
+    <input type="checkbox" name="fruit[]" value="Strawberry">Strawberry <br>
+    </div>
+
+    <div style="float: left; width: 10%;">
+    <input type="checkbox" name="fruit[]" value="Guava">Guava <br>
+    <input type="checkbox" name="fruit[]" value="Cherry">Cherry <br>
+    <input type="checkbox" name="fruit[]" value="Grape">Grape <br>
+    <input type="checkbox" name="fruit[]" value="Pineapple">Pineapple <br>
+    <input type="checkbox" name="fruit[]" value="Water Melon">Water Melon <br>
+    </div>
+<div style="clear: both;"></div>
 <p>
 <input type="submit"  name="add" value="Add to list" >
 <input type="submit"  name="clear" value="clear" >
@@ -33,9 +38,9 @@
 
 
 <p>
-    <textarea name="list" rows="10" cols="50" style="resize: none;"><?= $list; ?></textarea>
+    <textarea name="list" rows="10" cols="50" style="resize: none;"><?php echo $list; ?></textarea>
 </p>
     </form>
-    
+
 </body>
 </html>
