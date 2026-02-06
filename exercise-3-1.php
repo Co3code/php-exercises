@@ -7,20 +7,23 @@
 </head>
 <body>
     <h2>Exercise 3-1</h2>
+    <form method="post">
 
-
-    <form action="" method="post">
-
-
+<p><strong>Select fruit:</strong></p>
 <p>
-
-
-
-
-
+    <input type="checkbox" name="fruit[]" value="Apple">Apple
+    <input type="checkbox" name="fruit[]" value="Orange">Orange
+    <input type="checkbox" name="fruit[]" value="Mango">Mango
+    <input type="checkbox" name="fruit[]" value="Strawberry">Strawberry
+    <input type="checkbox" name="fruit[]" value="Guava">Guava
+    <input type="checkbox" name="fruit[]" value="Cherry">Cherry
+    <input type="checkbox" name="fruit[]" value="Grape">Grape
+    <input type="checkbox" name="fruit[]" value="Pineapple">Pineapple
+    <input type="checkbox" name="fruit[]" value="Water Melon">Water Melon
+</p>
+<p>
 <input type="submit"  name="add" value="Add to list" >
 <input type="submit"  name="clear" value="clear" >
-
 </p>
 
 
