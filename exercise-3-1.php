@@ -1,3 +1,29 @@
+
+<?php
+    session_start();
+
+    
+    if (! isset($_SESSION['list'])) {
+    $_SESSION['list'] = [];
+    }
+
+    // Add checked fruits
+    if (isset($_POST['add']) && isset($_POST['fruits'])) {
+    foreach ($_POST['fruits'] as $fruit) {
+        if (! in_array($fruit, $_SESSION['list'])) {
+            $_SESSION['list'][] = $fruit;
+        }
+    }
+    }
+
+    // Clear list
+    if (isset($_POST['clear'])) {
+    $_SESSION['list'] = [];
+    }
+    $list = implode("\n", $_SESSION['list']);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,14 +57,8 @@
 <input type="submit"  name="clear" value="clear" >
 </p>
 
-
-
-
-
-
-
 <p>
-    <textarea name="list" rows="10" cols="50" style="resize: none;"><?php echo $list; ?></textarea>
+    <textarea  rows="10" cols="50" style="resize: none;" readonly> <?php echo $list; ?></textarea>
 </p>
     </form>
 
