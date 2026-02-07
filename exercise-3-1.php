@@ -32,7 +32,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Exercise 3-1</h2>
+    <h2>Exercise 3-1 – Fruit Selection</h2>
     <form method="post">
 
 <p><strong>Select fruit:</strong></p>
