@@ -1,4 +1,38 @@
 <?php
+    $total = 0;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['processor'])) {
+        if ($_POST['processor']) {
+            foreach ($_POST['processor'] as $price) {
+                $total += (int) $price;
+            }
+        } else {
+            $total += (int) $_POST['processor'];
+        }
+    }
+    }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['accessories'])) {
+        if ($_POST['accessories']) {
+            foreach ($_POST['accessories'] as $price) {
+                $total += (int) $price;
+            }
+        } else {
+            $total += (int) $_POST['accessories'];
+        }
+    }
+    }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['ram'])) {
+        if ($_POST['ram']) {
+            foreach ($_POST['ram'] as $price) {
+                $total += (int) $price;
+            }
+        } else {
+            $total += (int) $_POST['ram'];
+        }
+    }
+    }
 
 ?>
 
@@ -40,11 +74,10 @@
 
     <br><br>
 
-    <strong> Accesories</strong><br>
-    <input type="checkbox" name="accesories[]" value="3000">Gaming Keyboard<br>
-    <input type="checkbox" name="accesories[]" value="3500">Gaming Mouse <br>
-    <input type="checkbox" name="accesories[]" value="2000">Gaming Headset<br>
-[]
+    <strong> Accessories</strong><br>
+    <input type="checkbox" name="accessories[]" value="3000">Gaming Keyboard<br>
+    <input type="checkbox" name="accessories[]" value="3500">Gaming Mouse <br>
+    <input type="checkbox" name="accessories[]" value="2000">Gaming Headset<br>
 
 <input type="submit" value="compute">
 <br><br>
