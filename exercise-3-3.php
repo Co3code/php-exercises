@@ -2,26 +2,37 @@
     $total = 0;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if (isset($_POST['processor'])) {
-        foreach ($_POST['processor'] as $price) {
-            $total += (int) $price;
+    $groups = ['processor', 'ram', 'accessories'];
+
+    foreach ($groups as $group) {
+        if (! empty($_POST[$group])) {
+            foreach ($_POST[$group] as $price) {
+                $total += (int) $price;
+            }
         }
     }
-
-    if (isset($_POST['accessories'])) {
-        foreach ($_POST['accessories'] as $price) {
-            $total += (int) $price;
-        }
-
-    }
-    if (isset($_POST['ram'])) {
-        foreach ($_POST['ram'] as $price) {
-            $total += (int) $price;
-        }
-
     }
 
-    }
+    // if (isset($_POST['processor'])) {
+    //     foreach ($_POST['processor'] as $price) {
+    //         $total += (int) $price;
+    //     }
+    // }
+
+    // if (isset($_POST['accessories'])) {
+    //     foreach ($_POST['accessories'] as $price) {
+    //         $total += (int) $price;
+    //     }
+
+    // }
+    // if (isset($_POST['ram'])) {
+    //     foreach ($_POST['ram'] as $price) {
+    //         $total += (int) $price;
+    //     }
+
+    // }
+
+    // }
 ?>
 
 
@@ -62,14 +73,14 @@
 
     <br><br>
 
-    <strong> Accessories</strong><br>
+    <strong>Accessories</strong><br>
     <input type="checkbox" name="accessories[]" value="3000">Gaming Keyboard<br>
     <input type="checkbox" name="accessories[]" value="3500">Gaming Mouse <br>
     <input type="checkbox" name="accessories[]" value="2000">Gaming Headset<br>
 
 <input type="submit" value="compute">
 <br><br>
-  TOTAL:<input type="text" name="total" value="<?php echo '₱' . number_format($total); ?>" readonly>
+  TOTAL:<input type="text" name="total" value="<?php echo $total > 0 ? '₱' . number_format($total) : '₱0'; ?>" readonly>
 
     </form>
 
