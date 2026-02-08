@@ -1,39 +1,27 @@
 <?php
     $total = 0;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     if (isset($_POST['processor'])) {
-        if ($_POST['processor']) {
-            foreach ($_POST['processor'] as $price) {
-                $total += (int) $price;
-            }
-        } else {
-            $total += (int) $_POST['processor'];
+        foreach ($_POST['processor'] as $price) {
+            $total += (int) $price;
         }
-    }
-    }
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['accessories'])) {
-        if ($_POST['accessories']) {
-            foreach ($_POST['accessories'] as $price) {
-                $total += (int) $price;
-            }
-        } else {
-            $total += (int) $_POST['accessories'];
-        }
-    }
-    }
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['ram'])) {
-        if ($_POST['ram']) {
-            foreach ($_POST['ram'] as $price) {
-                $total += (int) $price;
-            }
-        } else {
-            $total += (int) $_POST['ram'];
-        }
-    }
     }
 
+    if (isset($_POST['accessories'])) {
+        foreach ($_POST['accessories'] as $price) {
+            $total += (int) $price;
+        }
+
+    }
+    if (isset($_POST['ram'])) {
+        foreach ($_POST['ram'] as $price) {
+            $total += (int) $price;
+        }
+
+    }
+
+    }
 ?>
 
 
@@ -81,7 +69,7 @@
 
 <input type="submit" value="compute">
 <br><br>
-  TOTAL:<input type="text" name="total" value="<?php echo $total; ?>" readonly>
+  TOTAL:<input type="text" name="total" value="<?php echo '₱' . number_format($total); ?>" readonly>
 
     </form>
 
