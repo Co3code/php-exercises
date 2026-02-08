@@ -13,31 +13,31 @@
 
     <strong>Proccesor</strong> <br>
     <div style="float: left; width: 10%;">
-    <input type="checkbox" name="proccesor" value="inteli7">intel i7 <br>
-    <input type="checkbox" name="proccesor" value="inteli5">intel i5 <br>
-    <input type="checkbox" name="proccesor" value="inteli3">intel i3 <br>
+    <input type="checkbox" name="proccesor" value="15000">intel i7 <br>
+    <input type="checkbox" name="proccesor" value="13000">intel i5 <br>
+    <input type="checkbox" name="proccesor" value="10000">intel i3 <br>
     </div>
-    <input type="checkbox" name="processor" value="inteli3">intel Quad Core <br>
-    <input type="checkbox" name="processor" value="inteli3">intel Dual Core <br>
+    <input type="checkbox" name="processor" value="8000">intel Quad Core <br>
+    <input type="checkbox" name="processor" value="6000">intel Dual Core <br>
 
 <br><br>
 
 
     <strong>Ram</strong><br>
 <div style="float: left; width: 10%;">
-    <input type="checkbox" name="ram" value="16GB">16 GB<br>
-    <input type="checkbox" name="ram" value="8GB">8 GB <br>
+    <input type="checkbox" name="ram" value="10000">16 GB<br>
+    <input type="checkbox" name="ram" value="8000">8 GB <br>
 
 </div>
-    <input type="checkbox" name="ram" value="4GB">4GB<br>
-    <input type="checkbox" name="ram" value="2GB">2GB<br>
+    <input type="checkbox" name="ram" value="4000">4GB<br>
+    <input type="checkbox" name="ram" value="2000">2GB<br>
 
     <br><br>
 
     <strong> Accesories</strong><br>
-    <input type="checkbox" name="accesories" value="Gaming Keyboard">Gaming Keyboard<br>
-    <input type="checkbox" name="" value="Gaming Mouse">Gaming Mouse <br>
-    <input type="checkbox" name="accesories" value="Gaming Headset">Gaming Headset<br>
+    <input type="checkbox" name="accesories" value="3000">Gaming Keyboard<br>
+    <input type="checkbox" name="" value="3500">Gaming Mouse <br>
+    <input type="checkbox" name="accesories" value="2000">Gaming Headset<br>
 
 
 <input type="submit" value="compute">
