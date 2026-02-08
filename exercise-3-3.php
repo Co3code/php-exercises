@@ -1,3 +1,9 @@
+<?php
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,40 +17,41 @@
     <form method="post">
 
 
-    <strong>Proccesor</strong> <br>
+    <strong>Processor</strong> <br>
     <div style="float: left; width: 10%;">
-    <input type="checkbox" name="proccesor" value="15000">intel i7 <br>
-    <input type="checkbox" name="proccesor" value="13000">intel i5 <br>
-    <input type="checkbox" name="proccesor" value="10000">intel i3 <br>
+    <input type="checkbox" name="processor[]" value="15000">intel i7 <br>
+    <input type="checkbox" name="processor[]" value="13000">intel i5 <br>
+    <input type="checkbox" name="processor[]" value="10000">intel i3 <br>
     </div>
-    <input type="checkbox" name="processor" value="8000">intel Quad Core <br>
-    <input type="checkbox" name="processor" value="6000">intel Dual Core <br>
+    <input type="checkbox" name="processor[]" value="8000">intel Quad Core <br>
+    <input type="checkbox" name="processor[]" value="6000">intel Dual Core <br>
 
 <br><br>
 
 
     <strong>Ram</strong><br>
 <div style="float: left; width: 10%;">
-    <input type="checkbox" name="ram" value="10000">16 GB<br>
-    <input type="checkbox" name="ram" value="8000">8 GB <br>
+    <input type="checkbox" name="ram[]" value="10000">16 GB<br>
+    <input type="checkbox" name="ram[]" value="8000">8 GB <br>
 
 </div>
-    <input type="checkbox" name="ram" value="4000">4GB<br>
-    <input type="checkbox" name="ram" value="2000">2GB<br>
+    <input type="checkbox" name="ram[]" value="4000">4GB<br>
+    <input type="checkbox" name="ram[]" value="2000">2GB<br>
 
     <br><br>
 
     <strong> Accesories</strong><br>
-    <input type="checkbox" name="accesories" value="3000">Gaming Keyboard<br>
-    <input type="checkbox" name="" value="3500">Gaming Mouse <br>
-    <input type="checkbox" name="accesories" value="2000">Gaming Headset<br>
-
+    <input type="checkbox" name="accesories[]" value="3000">Gaming Keyboard<br>
+    <input type="checkbox" name="accesories[]" value="3500">Gaming Mouse <br>
+    <input type="checkbox" name="accesories[]" value="2000">Gaming Headset<br>
+[]
 
 <input type="submit" value="compute">
 <br><br>
-  TOTAL:<input type="text" name="total" value="0" readonly>
+  TOTAL:<input type="text" name="total" value="<?php echo $total; ?>" readonly>
 
     </form>
+
 
 </body>
 </html>
